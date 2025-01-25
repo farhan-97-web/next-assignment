@@ -1,9 +1,30 @@
 import React from 'react';
 
-const HomePage = () => {
+const getPost = async ()=>{
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const data = await res.json();
+    return data;
+}
+
+const HomePage =async () => {
+    const postData = await getPost();
     return (
         <div>
-            this is home
+            <div className='grid lg:grid-cols-5'>
+                {
+                    postData?.slice(0,20)?.map(post=>(
+                        <div key={post?.id} className="card bg-base-100 w-full lg:w-60 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title">Title : {post?.title}</h2>
+    
+    <div className="card-actions justify-end items-end bottom-0">
+      <button className="btn btn-primary">View Details</button>
+    </div>
+  </div>
+</div>
+                    ))
+                }
+            </div>
         </div>
     );
 };
