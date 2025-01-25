@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const getPost = async ()=>{
@@ -18,7 +19,7 @@ const HomePage =async () => {
     <h2 className="card-title">Title : {post?.title}</h2>
     
     <div className="card-actions justify-end items-end bottom-0">
-      <button className="btn btn-primary">View Details</button>
+     <Link href={`/home/${post?.id}`}> <button className="btn btn-primary">View Details</button></Link>
     </div>
   </div>
 </div>
