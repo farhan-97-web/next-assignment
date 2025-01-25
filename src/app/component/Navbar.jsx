@@ -41,12 +41,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-end lg:gap-5">
     
-    <Link href="/api/auth/login" className="btn btn-primary">
-  Login
-</Link>
-    <Link href="/api/auth/register" className="btn btn-primary">
-  Register
-</Link>
+    <button className='btn btn-primary'>Login</button>
+   
   </div>
 </div>
         </div>
