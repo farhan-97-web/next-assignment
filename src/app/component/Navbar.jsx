@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import React from 'react';
 
@@ -28,7 +29,7 @@ const Navbar = () => {
        <li><Link href={'/profile'}>Profile</Link></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Read Blog</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -39,8 +40,13 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end lg:gap-5">
-    <a className="btn btn-primary">Login</a>
-    <a className="btn btn-primary">Register</a>
+    
+    <Link href="/api/auth/login" className="btn btn-primary">
+  Login
+</Link>
+    <Link href="/api/auth/register" className="btn btn-primary">
+  Register
+</Link>
   </div>
 </div>
         </div>
