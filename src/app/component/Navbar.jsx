@@ -38,8 +38,9 @@ const Navbar = () => {
       
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end lg:gap-5">
+    <a className="btn btn-primary">Login</a>
+    <a className="btn btn-primary">Register</a>
   </div>
 </div>
         </div>
