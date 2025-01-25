@@ -29,7 +29,7 @@ const Navbar = () => {
        <li><Link href={'/profile'}>Profile</Link></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Read Blog</a>
+    <a className="btn btn-ghost text-xl">Read Blogs</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
